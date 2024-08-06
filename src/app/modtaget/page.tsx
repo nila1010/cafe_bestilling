@@ -8,7 +8,6 @@ export default async function modtaget() {
       completed: true,
     },
   });
-  console.log(data);
 
   return (
     <article>
