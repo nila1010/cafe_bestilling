@@ -12,14 +12,14 @@ type OrderProps = {
 export default function Ordercomp({ order, setOrders }: { order: OrderProps; setOrders: React.Dispatch<React.SetStateAction<OrderProps[]>> }) {
   const [updateValue, setUpdatedValue] = useState("");
   function editOrder() {
-    setOrders((o) => o.map((t) => (order.id === t.id ? { ...order, isEditing: !order.isEditing } : order)));
+    setOrders((o) => o.map((t) => (order.id === t.id ? { ...t, isEditing: !t.isEditing } : t)));
   }
   function delOrder() {
     setOrders((o) => o.filter((t) => t.id !== order.id));
   }
 
   function updateOrder() {
-    setOrders((o) => o.map((t) => (order.id === t.id ? { ...order, order: updateValue, isEditing: false } : order)));
+    setOrders((o) => o.map((t) => (order.id === t.id ? { ...t, order: updateValue, isEditing: false } : t)));
   }
 
   return order.isEditing ? (
