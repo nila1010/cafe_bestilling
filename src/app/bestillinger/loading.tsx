@@ -1,3 +1,5 @@
+import { RiseLoader } from "react-spinners";
+
 export default function Loading() {
-  return <div>loading</div>;
+  return <RiseLoader />;
 }
