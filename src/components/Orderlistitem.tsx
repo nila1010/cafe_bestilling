@@ -21,11 +21,13 @@ export default function Orderlistitem({ orderData, initials, orderDate, orderId 
   }
 
   function orderGiven() {
-    /*  setOrders((o) => o.filter((t) => t.completed === false)); */
+    setOrders((o) => o.filter((t) => t.completed === false));
+
     updateOrders(orders, orderId);
   }
+
   return (
-    <div className="mt-3 outline px-6 py-4 rounded-md">
+    <div className="mt-5 outline px-6 py-4 rounded-md">
       <div className="flex justify-between">
         <h2>
           Initialer: <span>{initials}</span>
@@ -56,6 +58,7 @@ export default function Orderlistitem({ orderData, initials, orderDate, orderId 
           );
         })}
       </ul>
+
       <Button
         onClick={orderGiven}
         className="ml-auto">

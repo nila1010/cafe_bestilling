@@ -1,6 +1,8 @@
 "use client";
 import { deleteOrder } from "@/actions/actions";
 import { Button } from "./ui/button";
+import { useState } from "react";
+import { RiseLoader } from "react-spinners";
 
 type orderType = {
   id: string;
@@ -11,16 +13,22 @@ type orderType = {
 };
 
 export default function Modtagetlisteitem({ order }: { order: orderType }) {
+  const [loading, setLoading] = useState(false);
   return (
     <li className="flex justify-between items-center">
       <p>{order.order}</p>
-      <Button
-        onClick={() => {
-          deleteOrder(order.id, order.bestillingId);
-        }}
-        size="sm">
-        Modtaget og fjern fra liste
-      </Button>
+      {!loading ? (
+        <Button
+          onClick={() => {
+            setLoading(true);
+            deleteOrder(order.id, order.bestillingId);
+          }}
+          size="sm">
+          Fjern fra liste
+        </Button>
+      ) : (
+        <RiseLoader size={10} />
+      )}
     </li>
   );
 }
