@@ -4,7 +4,7 @@ export default function NavBtn({ children, linkHref }: { children: React.ReactNo
   return (
     <Link
       prefetch={false}
-      className="font-bold text-2xl"
+      className="font-bold text-2xl hover:underline"
       href={`/${linkHref}`}>
       {children}
     </Link>

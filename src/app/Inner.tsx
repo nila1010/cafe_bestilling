@@ -57,7 +57,7 @@ export default function Home({ data }: { data: HomeProps }) {
                   value={value}
                   onChange={(e) => setValue(e.target.value)}></Input>
               </Label>
-              <Button>Tilføj</Button>
+              <Button>Tilføj til liste</Button>
             </div>
 
             {showError && <p className="text-red-600 mt-2">Produktet er allerede på listen</p>}
@@ -79,9 +79,11 @@ export default function Home({ data }: { data: HomeProps }) {
           Initialer
           <Input
             value={valueInit}
-            onChange={(e) => setValueInit(e.target.value)}></Input>
+            onChange={(e) => setValueInit(e.target.value)}
+            required
+          />
         </Label>
-        <Button className="grow">Tilføj bestilling</Button>
+        <Button className="grow">Udfør</Button>
       </form>
     </article>
   );
