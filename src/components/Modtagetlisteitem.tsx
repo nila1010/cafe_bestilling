@@ -14,9 +14,10 @@ type orderType = {
 
 export default function Modtagetlisteitem({ order }: { order: orderType }) {
   const [loading, setLoading] = useState(false);
+  const toUpper = order.order.charAt(0).toUpperCase() + order.order.slice(1).toLowerCase();
   return (
     <li className="flex justify-between items-center">
-      <p>{order.order}</p>
+      <p>{toUpper}</p>
       {!loading ? (
         <Button
           onClick={() => {

@@ -15,7 +15,7 @@ export default async function createOrder(orders: orderType[], valueInit: string
       initials: valueInit,
       orders: {
         create: orders.map((order) => ({
-          order: order.order,
+          order: order.order.toLowerCase(),
           completed: order.completed,
           isEditing: order.isEditing,
         })),
@@ -39,7 +39,7 @@ export async function updateOrders(orders: orderType[], orderId: string) {
             id: order.id,
           },
           data: {
-            order: order.order,
+            order: order.order.toLowerCase(),
             completed: order.completed,
             isEditing: order.isEditing,
           },

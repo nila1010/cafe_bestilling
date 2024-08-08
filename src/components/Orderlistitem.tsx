@@ -42,11 +42,12 @@ export default function Orderlistitem({ orderData, initials, orderDate, orderId 
           <li>Bestilt</li>
         </div>
         {orders.map((order, i) => {
+          const toUpper = order.order.charAt(0).toUpperCase() + order.order.slice(1).toLowerCase();
           return (
             <li
               key={order.id}
               className="flex justify-between items-center">
-              <p>{order.order}</p>
+              <p>{toUpper}</p>
               <Input
                 onChange={() => {
                   checkOrder(order.id);
