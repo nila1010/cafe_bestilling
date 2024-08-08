@@ -24,7 +24,8 @@ export default function Modtagetlisteitem({ order }: { order: orderType }) {
             setLoading(true);
             deleteOrder(order.id, order.bestillingId);
           }}
-          size="sm">
+          size="sm"
+          variant="destructive">
           Fjern fra liste
         </Button>
       ) : (
