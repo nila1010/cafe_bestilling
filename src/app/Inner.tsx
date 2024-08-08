@@ -29,8 +29,8 @@ export default function Home({ data }: { data: HomeProps }) {
 
   function addOrder(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-
-    const orderExists = data.some((oneOrder) => oneOrder.order === value);
+    const toLower = value.toLowerCase();
+    const orderExists = data.some((oneOrder) => oneOrder.order === toLower);
     const toUpper = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
 
     if (orderExists) {
@@ -42,6 +42,7 @@ export default function Home({ data }: { data: HomeProps }) {
 
     setValue("");
   }
+
   return (
     <article className="mt-5 grid gap-4">
       <div>

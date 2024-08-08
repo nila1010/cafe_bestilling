@@ -11,6 +11,9 @@ type OrderProps = {
 
 export default function Ordercomp({ order, setOrders }: { order: OrderProps; setOrders: React.Dispatch<React.SetStateAction<OrderProps[]>> }) {
   const [updateValue, setUpdatedValue] = useState("");
+
+  const toUpper = updateValue.charAt(0).toUpperCase() + updateValue.slice(1).toLowerCase();
+
   function editOrder() {
     setOrders((o) => o.map((t) => (order.id === t.id ? { ...t, isEditing: !t.isEditing } : t)));
   }
@@ -19,7 +22,7 @@ export default function Ordercomp({ order, setOrders }: { order: OrderProps; set
   }
 
   function updateOrder() {
-    setOrders((o) => o.map((t) => (order.id === t.id ? { ...t, order: updateValue, isEditing: false } : t)));
+    setOrders((o) => o.map((t) => (order.id === t.id ? { ...t, order: toUpper, isEditing: false } : t)));
   }
 
   return order.isEditing ? (
