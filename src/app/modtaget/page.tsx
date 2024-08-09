@@ -11,7 +11,7 @@ export default async function modtaget() {
 
   return (
     <article>
-      <h1 className="text-2xl mt-5">Når produktet ankommer fjern det fra listen</h1>
+      <h1 className="text-xl mt-5">Når produktet ankommer fjern det fra listen</h1>
       <ul className="grid gap-2 mt-5">
         {data.map((order) => (
           <Modtagetlisteitem

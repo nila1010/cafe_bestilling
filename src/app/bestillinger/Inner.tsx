@@ -31,7 +31,7 @@ export default function Inner({ data }: { data: InnerProps }) {
     <article>
       {!login ? (
         <>
-          <h1 className="text-2xl mt-5">Login for at se lister</h1>
+          <h1 className="text-xl mt-5">Login for at se lister</h1>
           <form
             onSubmit={checkLogin}
             className="mt-5">
@@ -47,7 +47,7 @@ export default function Inner({ data }: { data: InnerProps }) {
         </>
       ) : (
         <>
-          <h1 className="text-2xl mt-5">Oversigt over ting som skal bestilles</h1>
+          <h1 className="text-xl mt-5">Oversigt over ting som skal bestilles</h1>
           {filteredData.map((oneOrder) =>
             oneOrder.orders.length > 0 ? (
               <Orderlistitem
