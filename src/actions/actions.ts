@@ -9,7 +9,8 @@ type orderType = {
   isEditing: boolean;
 };
 
-export default async function createOrder(orders: orderType[], valueInit: string) {
+export default async function createOrder(e, orders: orderType[], valueInit: string) {
+  e.preventDefault();
   return await prisma.bestilling.create({
     data: {
       initials: valueInit,

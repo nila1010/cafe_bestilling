@@ -29,7 +29,6 @@ export default function Home({ data }: { data: HomeProps }) {
   const [valueInit, setValueInit] = useState("");
   const [showError, setShowError] = useState(false);
   const { pending } = useFormStatus();
-  console.log(pending);
 
   function addOrder(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -75,8 +74,8 @@ export default function Home({ data }: { data: HomeProps }) {
         </div>
       </div>
       <form
-        onSubmit={() => {
-          createOrder(orders, valueInit);
+        onSubmit={(e) => {
+          createOrder(e, orders, valueInit);
         }}
         className="flex gap-4 items-end">
         <Label className="text-[16px] max-w-16">

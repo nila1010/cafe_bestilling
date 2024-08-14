@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Prisma } from "@prisma/client";
 import { useState } from "react";
+export const dynamic = "force-dynamic";
 
 type InnerProps = Prisma.BestillingGetPayload<{
   include: {
