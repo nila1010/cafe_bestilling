@@ -9,8 +9,7 @@ type orderType = {
   isEditing: boolean;
 };
 
-export default async function createOrder(e: React.FormEvent<HTMLFormElement>, orders: orderType[], valueInit: string) {
-  e.preventDefault();
+export default async function createOrder(orders: orderType[], valueInit: string) {
   return await prisma.bestilling.create({
     data: {
       initials: valueInit,

@@ -74,8 +74,8 @@ export default function Home({ data }: { data: HomeProps }) {
         </div>
       </div>
       <form
-        onSubmit={(e) => {
-          createOrder(e, orders, valueInit);
+        onSubmit={() => {
+          createOrder(orders, valueInit);
         }}
         className="flex gap-4 items-end">
         <Label className="text-[16px] max-w-16">
