@@ -3,8 +3,10 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { useFormStatus } from "react-dom";
 import Ordercomp from "@/components/Ordercomp";
 import createOrder from "@/actions/actions";
+import RiseLoader from "react-spinners/RiseLoader";
 
 type OrderProps = {
   id: string;
@@ -26,6 +28,8 @@ export default function Home({ data }: { data: HomeProps }) {
   const [value, setValue] = useState("");
   const [valueInit, setValueInit] = useState("");
   const [showError, setShowError] = useState(false);
+  const { pending } = useFormStatus();
+  console.log(pending);
 
   function addOrder(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -83,7 +87,13 @@ export default function Home({ data }: { data: HomeProps }) {
             required
           />
         </Label>
-        <Button className="grow">Udfør</Button>
+        {pending ? (
+          <Button className="grow">
+            Tilføjer.. <RiseLoader loading={true} />
+          </Button>
+        ) : (
+          <Button className="grow">Udfør</Button>
+        )}
       </form>
     </article>
   );

@@ -1,6 +1,5 @@
 import Modtagetlisteitem from "@/components/Modtagetlisteitem";
 import prisma from "@/lib/db";
-export const dynamic = "force-dynamic";
 
 export default async function modtaget() {
   const data = await prisma.order.findMany({
