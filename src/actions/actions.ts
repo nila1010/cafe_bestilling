@@ -10,7 +10,7 @@ type orderType = {
 };
 
 export default async function createOrder(orders: orderType[], valueInit: string) {
-  return await prisma.bestilling.create({
+  await prisma.bestilling.create({
     data: {
       initials: valueInit,
       orders: {
