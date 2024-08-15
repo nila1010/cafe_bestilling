@@ -25,6 +25,7 @@ export default async function createOrder(orders: orderType[], valueInit: string
       orders: true,
     },
   });
+  revalidatePath("/");
 }
 
 export async function updateOrders(orders: orderType[], orderId: string) {

@@ -46,6 +46,8 @@ export default function Home({ data }: { data: HomeProps }) {
     setValue("");
   }
 
+  const updateUserWithListItems = createOrder.bind(null, orders, valueInit);
+
   return (
     <article className="mt-5 grid gap-4">
       <div>
@@ -74,9 +76,7 @@ export default function Home({ data }: { data: HomeProps }) {
         </div>
       </div>
       <form
-        onSubmit={() => {
-          createOrder(orders, valueInit);
-        }}
+        action={updateUserWithListItems}
         className="flex gap-4 items-end">
         <Label className="text-[16px] max-w-16">
           Initialer
