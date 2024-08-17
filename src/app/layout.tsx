@@ -18,11 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="da">
-      <body className={`${roboto.className} grid place-content-center p-4 `}>
+      <body className={`${roboto.className} bg-slate-300 p-4 `}>
         <header>
           <Navigation></Navigation>
         </header>
-        <main className="">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

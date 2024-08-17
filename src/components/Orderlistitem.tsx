@@ -27,7 +27,7 @@ export default function Orderlistitem({ orderData, initials, orderDate, orderId 
   }
 
   return (
-    <div className="mt-5 outline px-6 py-4 rounded-md">
+    <div className="mt-5 outline px-6 py-4 rounded-md bg-gray-100">
       <div className="flex justify-between">
         <h2>
           Initialer: <span>{initials}</span>
@@ -46,7 +46,7 @@ export default function Orderlistitem({ orderData, initials, orderDate, orderId 
           return (
             <li
               key={order.id}
-              className="flex justify-between items-center">
+              className="flex justify-between items-center mt-1">
               <p>{toUpper}</p>
               <Input
                 onChange={() => {
@@ -54,7 +54,7 @@ export default function Orderlistitem({ orderData, initials, orderDate, orderId 
                 }}
                 type="checkbox"
                 defaultChecked={order.completed ? true : false}
-                className="w-5"></Input>
+                className="w-5 h-5 shadow-sm "></Input>
             </li>
           );
         })}
@@ -62,7 +62,7 @@ export default function Orderlistitem({ orderData, initials, orderDate, orderId 
 
       <Button
         onClick={orderGiven}
-        className="ml-auto">
+        className="ml-auto mt-5">
         Bestilling afgivet
       </Button>
     </div>

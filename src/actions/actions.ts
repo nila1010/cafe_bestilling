@@ -1,6 +1,7 @@
 "use server";
 import prisma from "@/lib/db";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 type orderType = {
   id: string;
@@ -26,6 +27,7 @@ export default async function createOrder(orders: orderType[], valueInit: string
     },
   });
   revalidatePath("/");
+  redirect("/bestilt");
 }
 
 export async function updateOrders(orders: orderType[], orderId: string) {

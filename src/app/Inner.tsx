@@ -54,7 +54,7 @@ export default function Home({ data }: { data: HomeProps }) {
         <div>
           <form
             onSubmit={addOrder}
-            className="">
+            className="mb-5">
             <div className="flex gap-4 items-end">
               <Label className="grow">
                 Produkt

@@ -16,8 +16,8 @@ export default function Modtagetlisteitem({ order }: { order: orderType }) {
   const [loading, setLoading] = useState(false);
   const toUpper = order.order.charAt(0).toUpperCase() + order.order.slice(1).toLowerCase();
   return (
-    <li className="flex justify-between items-center">
-      <p>{toUpper}</p>
+    <li className="flex items-center gap-2">
+      <p className="grow bg-slate-100 py-1 px-2 rounded">{toUpper}</p>
       {!loading ? (
         <Button
           onClick={() => {

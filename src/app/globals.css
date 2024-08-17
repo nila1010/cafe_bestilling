@@ -21,7 +21,7 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
+    --input: 240 5.9% 10%;
     --ring: 240 10% 3.9%;
     --radius: 0.5rem;
     --chart-1: 12 76% 61%;
@@ -57,6 +57,16 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+}
+
+body {
+  /* background: linear-gradient(to right top, #d5deed, #c2d3da, #b6c6c6, #afb8b3, #a8aaa4);
+  background-repeat: no-repeat; */
+  height: 100svh;
+
+  display: grid;
+  justify-content: center;
+  align-content: start;
 }
 
 @layer base {

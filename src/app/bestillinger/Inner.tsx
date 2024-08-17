@@ -40,6 +40,7 @@ export default function Inner({ data }: { data: InnerProps }) {
               <Input
                 name="password"
                 type="password"
+                className="w-32"
               />
             </Label>
             <Button className="mt-3">Login</Button>
