@@ -45,6 +45,7 @@ export default function Home({ data }: { data: HomeProps }) {
 
     setValue("");
   }
+  console.log(pending);
 
   const updateUserWithListItems = createOrder.bind(null, orders, valueInit);
 
