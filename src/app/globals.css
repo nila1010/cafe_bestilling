@@ -60,8 +60,6 @@
 }
 
 body {
-  /* background: linear-gradient(to right top, #d5deed, #c2d3da, #b6c6c6, #afb8b3, #a8aaa4);
-  background-repeat: no-repeat; */
   height: 100svh;
 
   display: grid;
@@ -76,4 +74,15 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }

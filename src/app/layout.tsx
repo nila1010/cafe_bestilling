@@ -22,7 +22,7 @@ export default function RootLayout({
         <header>
           <Navigation></Navigation>
         </header>
-        <main>{children}</main>
+        <main className="pb-14">{children}</main>
       </body>
     </html>
   );

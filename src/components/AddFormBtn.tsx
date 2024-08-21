@@ -9,7 +9,7 @@ export default function AddFormBtn() {
     <Button
       disabled={pending}
       className="grow justify-evenly hover:scale-1 pointer-events-none">
-      Afgiver bestilling....{" "}
+      Afgiver bestilling....
       <RiseLoader
         loading={true}
         color="white"

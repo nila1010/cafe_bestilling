@@ -13,6 +13,9 @@ export default function Navigation() {
         <li>
           <NavBtn linkHref="modtaget">Modtaget</NavBtn>
         </li>
+        <li>
+          <NavBtn linkHref="lager">Lager</NavBtn>
+        </li>
       </ul>
     </nav>
   );
