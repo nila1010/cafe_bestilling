@@ -33,7 +33,7 @@ export default function Lager({ data }: { data: HomeProps }) {
     <article className=" items-center mt-5 gap-5">
       <h1 className="text-xl ">Hent fra lager liste</h1>
       <div className="flex justify-between text-xl font-bold mt-5">
-        <div className="flex gap-10">
+        <div className="flex gap-14">
           <h2 className="min-w-32">Produkt</h2>
           <h2>Antal</h2>
         </div>
