@@ -1,7 +1,7 @@
 export const lagerListe = [
   { title: "Fritz Cola", name: "fritz_cola" },
   { title: "Fritz Lemon", name: "fritz_lemon" },
-  { title: "Fritz Rababer", name: "fritz_rababer" },
+  { title: "Fritz Rabarber", name: "fritz_rababer" },
   { title: "Hyldeblomst", name: "hyldeblomst" },
   { title: "Tranebær", name: "tranebær" },
   { title: "Solbær", name: "solbær" },

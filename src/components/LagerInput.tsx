@@ -40,6 +40,7 @@ export default function LagerInput({ item, setOrders, orders, data }: { data: Ho
         <p className="min-w-36 text-lg">{item.title}</p>
         <Input
           type="number"
+          inputMode="numeric"
           name={item.title}
           className="w-12 text-center"
         />

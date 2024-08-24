@@ -34,7 +34,7 @@ export default function Lager({ data }: { data: HomeProps }) {
       <div className="flex justify-between text-xl font-bold mt-5">
         <div className="flex gap-14">
           <h2 className="min-w-32">Produkt</h2>
-          <h2>Antal</h2>
+          <h2>Hent</h2>
         </div>
         <h2>Mangler</h2>
       </div>
