@@ -27,7 +27,7 @@ export default async function createOrder(orders: orderType[], valueInit: string
     },
   });
   revalidatePath("/");
-  redirect("/bestilt");
+  redirect("/afgivet");
 }
 
 export async function updateOrders(orders: orderType[], orderId: string) {
@@ -59,7 +59,7 @@ export async function deleteOrder(orderId: string, bestillingId: string) {
       id: orderId,
     },
   });
-  revalidatePath("/modtaget");
+  revalidatePath("/bestilt");
 
   const bestilling = await prisma.bestilling.findUnique({
     where: { orderId: bestillingId },
